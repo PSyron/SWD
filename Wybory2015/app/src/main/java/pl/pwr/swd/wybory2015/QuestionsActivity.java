@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-/**
- * Created by Syron on 2015-05-17.
- */
+
 public class QuestionsActivity extends Activity {
     TextView mUiYes;
     TextView mUiNo;
@@ -48,7 +46,7 @@ public class QuestionsActivity extends Activity {
         mUiNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextQuestion(QuestionAnswer.no);;
+                nextQuestion(QuestionAnswer.no);
             }
         });
         mUiSkip.setOnClickListener(new View.OnClickListener() {
@@ -81,9 +79,6 @@ public class QuestionsActivity extends Activity {
     }
 
     public boolean isLast(){
-        if(currentIndex == (questionDB.length - 1)){
-            return true;
-        }
-        return false;
+        return currentIndex == (questionDB.length - 1);
     }
 }
