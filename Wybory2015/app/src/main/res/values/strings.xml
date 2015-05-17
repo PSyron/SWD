@@ -6,4 +6,9 @@
     <string name="click_to_start">Kliknij, aby rozpocząć</string>
     <string name="make_decision">Podejmij decyzje!</string>
     <string name="election">Wybory Prezydenckie</string>
+    //questions
+    <string name="yes">TAK</string>
+    <string name="no">NIE</string>
+    <string name="skip">Pomiń</string>
+
 </resources>
