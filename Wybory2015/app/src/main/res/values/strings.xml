@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="click_to_start">Kliknij, aby rozpocząć</string>
+    <string name="make_decision">Podejmij decyzje!</string>
+    <string name="election">Wybory Prezydenckie</string>
 </resources>
