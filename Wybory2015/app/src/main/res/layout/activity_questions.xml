@@ -5,6 +5,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/questions_question"
         android:text="Czy jestes za aborcja?"
         android:gravity="center"
         android:textSize="34sp"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:max="10"
             android:progress="2"
+            android:id="@+id/questions_progressbar"
             android:layout_alignParentTop="true"/>
         <LinearLayout
             android:layout_centerInParent="true"
