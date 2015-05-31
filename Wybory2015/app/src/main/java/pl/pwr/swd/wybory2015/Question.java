@@ -24,4 +24,8 @@ public class Question {
         description = desc;
         state = QuestionAnswer.skip;
     }
+
+    public Question(QuestionAnswer stater){
+        state = stater;
+    }
 }

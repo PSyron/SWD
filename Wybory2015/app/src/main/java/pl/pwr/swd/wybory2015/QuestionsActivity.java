@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class QuestionsActivity extends Activity {
     TextView mUiYes;
@@ -16,6 +19,14 @@ public class QuestionsActivity extends Activity {
     TextView mUiQuestion;
     int currentIndex;
     Question[] questionDB = new Question[]{new Question("Tak czy nie"), new Question("Moze byc na cztery?"), new Question("Czy Piotrek Fracek to spoko ziomek"), new Question("Jak bardzo lubisz SWD")};
+    Candidate mKorwin = new Candidate("Janusz Korwin-Mikke", new QuestionAnswer[]{QuestionAnswer.no, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.korwin);
+    Candidate mKukiz = new Candidate("Paweł Kukiz", new QuestionAnswer[]{QuestionAnswer.yes, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.kukiz);
+    Candidate[] candidates = new Candidate[]{mKorwin,mKukiz};
+
+
+   public static Candidate[] result;
+
+    public static final String intentExtras = "resultArray";
 
 
     @Override
@@ -63,6 +74,8 @@ public class QuestionsActivity extends Activity {
         questionDB[currentIndex].setState(state);
         if (isLast()) {
             Intent intent = new Intent(QuestionsActivity.this, ResultActivity.class);
+            intent.putExtra(intentExtras, algorytm());
+
             startActivity(intent);
             finish();
         }else{
@@ -70,6 +83,25 @@ public class QuestionsActivity extends Activity {
             mUiProgress.setProgress(currentIndex);
             mUiQuestion.setText(questionDB[currentIndex].description);
         }
+    }
+
+    public Candidate[] algorytm(){
+         List<Candidate> result2 = new ArrayList<Candidate>();
+        for(Candidate temp : candidates){
+            boolean isFitting = true;
+            for(int i = 0 ; i< questionDB.length ; i++){
+                if(temp.answears[i] != questionDB[i].state  && questionDB[i].state != QuestionAnswer.skip){
+                    isFitting = false;
+                }
+            }
+            if(isFitting)
+                result2.add(temp);
+        }
+        Candidate[] temp2 = new Candidate[result2.size()];
+        for(int j = 0 ; j< temp2.length ; j++){
+            temp2[j] = result2.get(j);
+        }
+        return temp2;
     }
 
     @Override
