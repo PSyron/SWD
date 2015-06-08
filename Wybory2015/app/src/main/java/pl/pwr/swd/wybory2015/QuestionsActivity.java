@@ -20,7 +20,7 @@ public class QuestionsActivity extends Activity {
     int currentIndex;
     Question[] questionDB = new Question[]{new Question("Tak czy nie"), new Question("Moze byc na cztery?"), new Question("Czy Piotrek Fracek to spoko ziomek"), new Question("Jak bardzo lubisz SWD")};
     Candidate mKorwin = new Candidate("Janusz Korwin-Mikke", new QuestionAnswer[]{QuestionAnswer.no, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.korwin);
-    Candidate mKukiz = new Candidate("Paweł Kukiz", new QuestionAnswer[]{QuestionAnswer.yes, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.kukiz);
+    Candidate mKukiz = new Candidate("Paweł Kukiz", new QuestionAnswer[]{QuestionAnswer.yes, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.skukiz);
     Candidate[] candidates = new Candidate[]{mKorwin,mKukiz};
 
 
