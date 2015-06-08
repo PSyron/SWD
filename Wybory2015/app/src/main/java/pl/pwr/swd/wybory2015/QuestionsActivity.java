@@ -18,10 +18,95 @@ public class QuestionsActivity extends Activity {
     ProgressBar mUiProgress;
     TextView mUiQuestion;
     int currentIndex;
-    Question[] questionDB = new Question[]{new Question("Tak czy nie"), new Question("Moze byc na cztery?"), new Question("Czy Piotrek Fracek to spoko ziomek"), new Question("Jak bardzo lubisz SWD")};
-    Candidate mKorwin = new Candidate("Janusz Korwin-Mikke", new QuestionAnswer[]{QuestionAnswer.no, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.korwin);
-    Candidate mKukiz = new Candidate("Paweł Kukiz", new QuestionAnswer[]{QuestionAnswer.yes, QuestionAnswer.yes, QuestionAnswer.skip, QuestionAnswer.skip}, R.drawable.kukiz);
-    Candidate[] candidates = new Candidate[]{mKorwin,mKukiz};
+    Question[] questionDB = new Question[]{
+      new Question("Czy należy zlikwidować senat?"),
+      new Question("Czy Polska powinna zacieśniać integrację gospodarczą z państwami UE?"),
+      new Question("Czy powinniśmy w większym stopniu wspierać państwa uboższe?"),
+      new Question("Czy jesteś za zasadniczą służbą wojskową?"),
+      new Question("Czy potrzebujemy stałej obecności sił NATO na terenie kraju?"),
+      new Question("Czy In Vitro powinno być zakazane?"),
+      new Question("Czy należy przywrócić wiek emerytalny sprzed reformy z roku 2011?"),
+      new Question("Czy Polska powinna wejść do strefy EURO?"),
+      new Question("Czy jesteś za dotowaniem odnawialnych źródeł energii ze środków publicznych?"),
+      new Question("Czy powinny zostać zalegalizowane związki partnerskie jedno oraz dwupłciowe?")
+    };
+
+    Candidate mKomorowski = new Candidate(
+      "Bronisław Komorowski",
+      new QuestionAnswer[]{
+        QuestionAnswer.yes,
+        QuestionAnswer.yes,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.no
+      }, R.drawable.korwin);
+
+    Candidate mKorwin = new Candidate(
+      "Janusz Korwin-Mikke",
+      new QuestionAnswer[]{
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+      }, R.drawable.korwin);
+
+      Candidate mDuda = new Candidate(
+        "Andrzej Duda",
+        new QuestionAnswer[]{
+          QuestionAnswer.no,
+          QuestionAnswer.no,
+          QuestionAnswer.yes,
+          QuestionAnswer.no,
+          QuestionAnswer.yes,
+          QuestionAnswer.yes,
+          QuestionAnswer.yes,
+          QuestionAnswer.no,
+          QuestionAnswer.yes,
+          QuestionAnswer.no
+        }, R.drawable.korwin);
+
+    Candidate mKukiz = new Candidate(
+      "Paweł Kukiz",
+      new QuestionAnswer[]{
+        QuestionAnswer.yes,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.yes,
+        QuestionAnswer.no,
+        QuestionAnswer.no,
+        QuestionAnswer.yes
+      }, R.drawable.kukiz);
+
+      Candidate mBraun = new Candidate(
+        "Grzegorz Braun",
+        new QuestionAnswer[]{
+          QuestionAnswer.no,
+          QuestionAnswer.no,
+          QuestionAnswer.no,
+          QuestionAnswer.yes,
+          QuestionAnswer.no,
+          QuestionAnswer.yes,
+          QuestionAnswer.yes,
+          QuestionAnswer.no,
+          QuestionAnswer.no,
+          QuestionAnswer.no
+        }, R.drawable.kukiz);
+
+    Candidate[] candidates = new Candidate[]{mKomorowski,mKorwin,mDuda,mKukiz,mBraun};
 
 
    public static Candidate[] result;
