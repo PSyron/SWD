@@ -44,7 +44,7 @@ public class QuestionsActivity extends Activity {
         QuestionAnswer.yes,
         QuestionAnswer.no,
         QuestionAnswer.no
-      }, R.drawable.korwin);
+      }, R.drawable.komorowski);
 
     Candidate mKorwin = new Candidate(
       "Janusz Korwin-Mikke",
@@ -74,7 +74,7 @@ public class QuestionsActivity extends Activity {
           QuestionAnswer.no,
           QuestionAnswer.yes,
           QuestionAnswer.no
-        }, R.drawable.korwin);
+        }, R.drawable.duda);
 
     Candidate mKukiz = new Candidate(
       "Paweł Kukiz",
@@ -104,7 +104,7 @@ public class QuestionsActivity extends Activity {
           QuestionAnswer.no,
           QuestionAnswer.no,
           QuestionAnswer.no
-        }, R.drawable.kukiz);
+        }, R.drawable.braun);
 
     Candidate[] candidates = new Candidate[]{mKomorowski,mKorwin,mDuda,mKukiz,mBraun};
 
@@ -182,6 +182,7 @@ public class QuestionsActivity extends Activity {
             if(isFitting)
                 result2.add(temp);
         }
+        //Lista do tablicy
         Candidate[] temp2 = new Candidate[result2.size()];
         for(int j = 0 ; j< temp2.length ; j++){
             temp2[j] = result2.get(j);
